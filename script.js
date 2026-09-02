@@ -1,13 +1,61 @@
-const botao = document.getElementById('botao_tema');
+const menuButton = document.getElementById("menuButton");
+const nav = document.getElementById("nav");
 
-function alternarModo () {
-  document.body.classList.toggle('modo_escuro');
+menuButton.addEventListener("click", () => {
+nav.classList.toggle("active");
+});
 
-  if(document.body.classList.contains('modo_escuro')) {
-    botao.textContent = 'Modo Claro';
-  }else {
-    botao.textContent = 'Modo Escuro';
-  }
- 
+const themeButton = document.getElementById("themeButton");
+
+themeButton.addEventListener("click", () => {
+
+```
+document.body.classList.toggle("dark");
+
+if (document.body.classList.contains("dark")) {
+    themeButton.textContent = "☀️";
+} else {
+    themeButton.textContent = "🌙";
 }
-botao.addEventListener('click', alternarModo);
+```
+
+});
+
+const eraButton = document.getElementById("eraButton");
+const eraResult = document.getElementById("eraResult");
+
+const eras = [
+"My World 💜",
+"Believe ✨",
+"Purpose 🖤",
+"Justice 🤍"
+];
+
+eraButton.addEventListener("click", () => {
+
+```
+const random =
+    eras[Math.floor(Math.random() * eras.length)];
+
+eraResult.textContent =
+    "Sua era é: " + random;
+```
+
+});
+
+const readButtons =
+document.querySelectorAll(".read-more");
+
+readButtons.forEach(button => {
+
+```
+button.addEventListener("click", () => {
+
+    alert(
+        "Em breve você poderá ler este post completo! 💜"
+    );
+
+});
+```
+
+});
