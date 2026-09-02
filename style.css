@@ -25,7 +25,7 @@ a{
   text-align: center;
 }
 a:hover{
-  color: pink;
+  color: blue;
 }
 body.modo_escuro {
   background-color: black;
